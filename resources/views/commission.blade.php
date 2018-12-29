@@ -26,8 +26,37 @@
     </div>
 
     <div class="form-group">
+      <p>Type</p>
+      {{ Form::radio('type', '1', true) }}
+      {{ Form::label('type', 'Chibi') }}
+
+      {{ Form::radio('type', '2', false) }}
+      {{ Form::label('type', 'Chibi 2') }}
+
+      {{ Form::radio('type', '3', false) }}
+      {{ Form::label('type', 'Panels') }}
+
+      {{ Form::radio('type', '4', false) }}
+      {{ Form::label('type', 'Other (Specify in Additional Information)') }}
+    </div>
+
+    <div class="form-group">
+      <p>Are you going to be using the work for commercial use? <a href="/faq#commercial-use">(Click here to make sure)</a>*</p>
+      {{ Form::radio('commercial', '1', true) }}
+      {{ Form::label('commercial', 'Yes') }}
+
+      {{ Form::radio('commercial', '0', false) }}
+      {{ Form::label('commercial', 'No') }}
+    </div>
+
+    <div class="form-group">
       {{ Form::label('message', 'Additional Info (Poses, Important features, etc.) *') }}
       {{ Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'Enter Message']) }}
+    </div>
+
+    <div class="form-group">
+      {{ Form::checkbox('tos', '1') }}
+      <label class="form-check-label" for="tos">By checking this box, I read and agree to the <a href="/tos">Terms of Service.</a></label>
     </div>
 
     {{ Form::submit('Submit', ['class' => 'btn btn-primary']) }}
