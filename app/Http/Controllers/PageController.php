@@ -14,10 +14,6 @@ class PageController extends Controller
       return view("portfolio");
     }
 
-    public function commission() {
-      return view("commission");
-    }
-
     public function faq() {
       return view("faq");
     }

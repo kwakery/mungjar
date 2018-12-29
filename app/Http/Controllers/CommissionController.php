@@ -24,7 +24,7 @@ class CommissionController extends Controller
      */
     public function create()
     {
-        //
+        return view('commissions.create');
     }
 
     /**
@@ -35,7 +35,33 @@ class CommissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+          'name' => 'required',
+          'email' => 'required|email',
+          'duedate' => 'required',
+          'type' => 'required|integer|between:1,4',
+          'commercial' => 'required|boolean',
+          'message' => 'required',
+          'tos' => 'required|accepted'
+        ]);
+
+        $input = $request->all();
+        $token = str_random(8);
+
+        /* Create commission */
+        $commission = new Commission;
+        $commission->name = $input['name'];
+        $commission->email = $input['email'];
+        $commission->duedate = $input['duedate'];
+        $commission->type = $input['type'];
+        $commission->commercial = $input['commercial'];
+        $commission->message = $input['message'];
+
+        /* Store commission */
+        $commission->save();
+
+        // Redirect
+        return view('commissions.success', ['token' => $token]);
     }
 
     /**
@@ -46,7 +72,7 @@ class CommissionController extends Controller
      */
     public function show(Commission $commission)
     {
-        //
+
     }
 
     /**
@@ -57,7 +83,7 @@ class CommissionController extends Controller
      */
     public function edit(Commission $commission)
     {
-        //
+        return view('/');
     }
 
     /**
@@ -69,7 +95,7 @@ class CommissionController extends Controller
      */
     public function update(Request $request, Commission $commission)
     {
-        //
+        return view('/');
     }
 
     /**
@@ -80,6 +106,6 @@ class CommissionController extends Controller
      */
     public function destroy(Commission $commission)
     {
-        //
+        return view('/');
     }
 }

@@ -13,7 +13,8 @@
 
 Route::get('/', 'PageController@home');
 Route::get('portfolio', 'PageController@portfolio');
-Route::get('commission', 'PageController@commission');
+
+Route::resource('commissions', 'CommissionController');
 
 Route::get('contact', 'ContactController@show');
 Route::post('contact/submit', 'ContactController@submit');

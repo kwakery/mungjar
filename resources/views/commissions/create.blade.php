@@ -9,7 +9,7 @@
   <p>If you do not connect via Discord, I will contact you through email.</p>
 
   <p class="text-muted">Fields marked with * are required.</p>
-  {!! Form::open(['url' => 'commissions/add']) !!}
+  {!! Form::open(['url' => 'commissions']) !!}
     <div class="form-group">
       {{ Form::label('name', 'Name *') }}
       {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'John Doe']) }}
