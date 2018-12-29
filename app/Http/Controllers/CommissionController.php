@@ -41,7 +41,7 @@ class CommissionController extends Controller
           'duedate' => 'required',
           'type' => 'required|integer|between:1,4',
           'commercial' => 'required|boolean',
-          'message' => 'required',
+          'info' => 'required',
           'tos' => 'required|accepted'
         ]);
 
@@ -55,10 +55,13 @@ class CommissionController extends Controller
         $commission->duedate = $input['duedate'];
         $commission->type = $input['type'];
         $commission->commercial = $input['commercial'];
-        $commission->message = $input['message'];
+        $commission->info = $input['info'];
 
         /* Store commission */
         $commission->save();
+
+        // $route = route('commissions.show', $token);
+        // sendHook("**zOMG!!~ A new commission has been requested!**\r\nName: {$input['name']}\r\nPayPal Email: {$input['paypal']}\r\nCharacter Name: {$input['ign']}\r\nRequested Deadline: {$input['deadline']}\r\nCommission Type:{$input['type']}\r\nCommercial Use? {$commercial}\r\nAdditional Information: {$input['comments']}\r\n{$route}\r\n@everyone");
 
         // Redirect
         return view('commissions.success', ['token' => $token]);

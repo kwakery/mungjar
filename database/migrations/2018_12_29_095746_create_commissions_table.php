@@ -18,8 +18,8 @@ class CreateCommissionsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('duedate');
-            $table->tinyInteger('type', 5);
-            $table->tinyInteger('commercial', 1);
+            $table->tinyInteger('type');
+            $table->boolean('commercial', 1);
             $table->mediumText('info');
             $table->timestamps();
         });

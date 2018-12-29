@@ -50,8 +50,8 @@
     </div>
 
     <div class="form-group">
-      {{ Form::label('message', 'Additional Info (Poses, Important features, etc.) *') }}
-      {{ Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'Enter Message']) }}
+      {{ Form::label('info', 'Additional Info (Poses, Important features, etc.) *') }}
+      {{ Form::textarea('info', '', ['class' => 'form-control', 'placeholder' => 'Enter Message']) }}
     </div>
 
     <div class="form-group">
