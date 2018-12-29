@@ -26,6 +26,10 @@
       </div>
     </main>
 
+    <footer class="text-center">
+      Made with <i class="fas fa-heart"></i> by kwakery
+    </footer>
+
     @endif
   </body>
 </html>
