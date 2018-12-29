@@ -21,6 +21,10 @@ class CreateCommissionsTable extends Migration
             $table->tinyInteger('type');
             $table->boolean('commercial', 1);
             $table->mediumText('info');
+            $table->tinyInteger('status')->default(0);
+            $table->string('token');
+            $table->tinyInteger('auth')->default(0);
+            $table->string('discord')->nullable();
             $table->timestamps();
         });
     }

@@ -14,6 +14,11 @@ return [
     |
     */
 
+    'discord' => [
+        'clientid' => env('DISCORD_CLIENT_ID'),
+        'secret' => env('DISCORD_SECRET')
+    ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),

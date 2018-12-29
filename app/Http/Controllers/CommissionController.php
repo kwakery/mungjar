@@ -56,6 +56,7 @@ class CommissionController extends Controller
         $commission->type = $input['type'];
         $commission->commercial = $input['commercial'];
         $commission->info = $input['info'];
+        $commission->token = $token;
 
         /* Store commission */
         $commission->save();

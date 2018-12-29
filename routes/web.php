@@ -22,3 +22,6 @@ Route::post('contact/submit', 'ContactController@submit');
 Route::get('faq', 'PageController@faq');
 Route::get('tos', 'PageController@tos');
 Route::get('pricing', 'PageController@pricing');
+
+Route::get('/connect/{token}', 'DiscordController@app');
+Route::get('/connected', 'DiscordController@register');
