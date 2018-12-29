@@ -19,6 +19,8 @@
           <div class="card">
             <div class="card-body">
               <h2 class="text-center">@yield('name')</h2>
+              @include('partials.alerts')
+
               @yield('content')
             </div>
           </div>
@@ -31,5 +33,21 @@
     </footer>
 
     @endif
+    @if(Request::is('portfolio'))
+      <script src="/js/app.js"></script>
+      <script src="/js/masonry.min.js"></script>
+      <script src="/js/isotope.min.js"></script>
+      <script src="/js/imagesloaded.min.js"></script>
+      <script type="text/javascript">
+        $('.grid').masonry({
+          // options
+          itemSelector: '.grid-item',
+          columnWidth: 200
+        });
+      </script>
+    @else
+      <script src="/js/jquery-3.3.1.min.js"></script>
+    @endif
+    <script src="/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -7,7 +7,7 @@
 <div id="pricing" class="text-center">
   <div id="chibi1">
     <h2>Chibi Style 1</h2>
-    <img src="/images/portfolio/chibi1/1.png" alt="" width="10%">
+    <img src="/images/portfolio/chibi1/7.png" alt="" width="10%">
     <ul>
       <li>$15</li>
       <li>Size around 600x800</li>

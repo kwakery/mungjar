@@ -18,10 +18,6 @@ class PageController extends Controller
       return view("commission");
     }
 
-    public function contact() {
-      return view("contact");
-    }
-
     public function faq() {
       return view("faq");
     }

@@ -10529,6 +10529,14 @@ nav ul {
   font-size: 2em;
 }
 
+nav ul .active a {
+  color: #fab988;
+}
+
+nav ul .active a:hover {
+  color: #000;
+}
+
 nav ul li {
   display: inline;
   margin-right: 25px;
@@ -10586,8 +10594,7 @@ nav a:hover {
   color: #ff6961;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+/* Sticky footer */
 
 html {
   position: relative;
@@ -10596,5 +10603,17 @@ html {
 
 footer {
   margin-bottom: 20px;
+}
+
+/* Masonry */
+
+.grid-item {
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.grid-item img {
+  width: 100%;
 }
 

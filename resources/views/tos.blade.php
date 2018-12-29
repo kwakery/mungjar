@@ -62,5 +62,5 @@ I will <strong>NOT</strong> accept the following:
     <li>By commissioning me, you are agreeing to my terms of serivce.</li>
 </ul>
 
-<p class="text-center" id="last-updated">This page was last modified: 11 April 2017 01:01:32</p> {{-- TODO: this --}}
+<p class="text-center" id="last-updated">This page was last modified: {{ lastModified("../resources/views/tos.blade.php") }}</p>
 @endsection

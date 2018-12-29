@@ -14,7 +14,10 @@
 Route::get('/', 'PageController@home');
 Route::get('portfolio', 'PageController@portfolio');
 Route::get('commission', 'PageController@commission');
-Route::get('contact', 'PageController@contact');
+
+Route::get('contact', 'ContactController@show');
+Route::post('contact/submit', 'ContactController@submit');
+
 Route::get('faq', 'PageController@faq');
 Route::get('tos', 'PageController@tos');
 Route::get('pricing', 'PageController@pricing');

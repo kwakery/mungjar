@@ -5,7 +5,10 @@
 
 @section('content')
   <h2>Discord:</h2>
-  <p>The fastest way to reach me is through messaging me on Discord.</p>
+  <p>The fastest way to reach me is through messaging me on Discord:
+    <br />
+    <a href="{{ config('social.discord') }}">{{ config('social.discord') }}</a>
+  </p>
 
   <h2>Social Media:</h2>
   <p>Feel free to send me a message in the following platforms:</p>
@@ -19,17 +22,17 @@
   {!! Form::open(['url' => 'contact/submit']) !!}
     <div class="form-group">
       {{ Form::label('name', 'Name') }}
-      {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'John Doe']) }}
+      {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'John Doe', 'required' => 'required']) }}
     </div>
 
     <div class="form-group">
       {{ Form::label('email', 'E-Mail Address') }}
-      {{ Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'john.doe@gmail.com']) }}
+      {{ Form::email('email', '', ['class' => 'form-control', 'placeholder' => 'john.doe@gmail.com', 'required' => 'required']) }}
     </div>
 
     <div class="form-group">
       {{ Form::label('message', 'Message') }}
-      {{ Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'Enter Message']) }}
+      {{ Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'Enter Message', 'required' => 'required']) }}
     </div>
 
     {{ Form::submit('Submit', ['class' => 'btn btn-primary text-center']) }}

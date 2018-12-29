@@ -40,9 +40,20 @@ nav {
     list-style: none;
     font-size: 2em;
 
+    .active {
+      a {
+        color: #fab988;
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+
     li {
       display: inline;
       margin-right: 25px;
+
 
       a {
         color: #000;
@@ -99,8 +110,7 @@ nav {
   color: #ff6961;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+/* Sticky footer */
 html {
   position: relative;
   min-height: 100%;
@@ -108,4 +118,17 @@ html {
 
 footer {
   margin-bottom: 20px;
+}
+
+
+
+/* Masonry */
+.grid-item {
+    width: 25%;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    img {
+      width: 100%;
+    }
 }
