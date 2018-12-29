@@ -11,34 +11,60 @@ body {
   font-family: 'babyblue', monospace;
 }
 
+#pricing {
+  div {
+    h2 {
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 0;
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+}
+
 nav {
   margin-top: 1%;
   text-align: center;
 
-  h1 {
-    font-size: 5em;
-    font-weight: lighter;
-    margin-bottom: 1%
-  }
-}
+  ul {
+    list-style: none;
+    font-size: 2em;
 
-ul {
-  list-style: none;
-  font-size: 2em;
+    li {
+      display: inline;
+      margin-right: 25px;
 
-  li {
-    display: inline;
-    margin-right: 25px;
-
-    a {
-      color: #000;
-      text-decoration: none;
-
-      &:hover {
-        color: #fab988;
-        transition: color 0.3s ease;
+      a {
+        color: #000;
         text-decoration: none;
+
+        &:hover {
+          color: #fab988;
+          transition: color 0.3s ease;
+          text-decoration: none;
+        }
       }
+    }
+  }
+
+  a {
+    color: #000;
+
+    h1 {
+      font-size: 5em;
+      font-weight: lighter;
+      margin-bottom: 1%
+    }
+
+    &:hover {
+      color: #fab988;
+      transition: color 0.3s ease;
+      text-decoration: none;
     }
   }
 }

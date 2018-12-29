@@ -11,14 +11,21 @@
   <body>
     @include('partials.nav')
 
+    @if (!Request::is('/'))
+
     <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-lg-8">
-            @yield('content')
+      <div class="container-fluid">
+        <div class="col-md-8 col-lg-8 offset-md-2">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="text-center">@yield('name')</h2>
+              @yield('content')
+            </div>
           </div>
         </div>
       </div>
     </main>
+
+    @endif
   </body>
 </html>

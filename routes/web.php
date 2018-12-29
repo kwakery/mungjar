@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'PageController@home');
+Route::get('portfolio', 'PageController@portfolio');
+Route::get('commission', 'PageController@commission');
+Route::get('contact', 'PageController@contact');
+Route::get('faq', 'PageController@faq');
+Route::get('tos', 'PageController@tos');
+Route::get('pricing', 'PageController@pricing');

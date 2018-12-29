@@ -1,10 +1,10 @@
 <nav>
-  <h1>mungjar</h1>
+  <a href="/"><h1>mungjar</h1></a>
   <ul>
-    <li><a href="#">portfolio</a></li>
-    <li><a href="#">commission</a></li>
-    <li><a href="#">contact</a></li>
-    <li><a href="#">faq</a></li>
+    <li><a href="/portfolio">portfolio</a></li>
+    <li><a href="/commission">commission</a></li>
+    <li><a href="/contact">contact</a></li>
+    <li><a href="/faq">faq</a></li>
   </ul>
   @if (Request::is('/'))
     <img src="/images/logo.png" alt="" width="25%">
