@@ -36498,6 +36498,9 @@ $(document).ready(function () {
       filter: selector
     });
   });
+  /* Bootstrap stuff */
+
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 /***/ }),

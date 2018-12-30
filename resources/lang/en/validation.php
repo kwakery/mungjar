@@ -128,6 +128,10 @@ return [
     */
 
     'custom' => [
+        'g-recaptcha-response' => [
+          'required' => 'Please verify that you are not a robot.',
+          'captcha' => 'Captcha error! try again or contact site admin.',
+        ],
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],

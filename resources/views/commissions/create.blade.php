@@ -9,7 +9,7 @@
   <p>If you do not connect via Discord, I will contact you through email.</p>
 
   <p class="text-muted">Fields marked with * are required.</p>
-  {!! Form::open(['url' => 'commissions']) !!}
+  {!! Form::open(['id' => 'commission','url' => 'commissions']) !!}
     <div class="form-group">
       {{ Form::label('name', 'Name *') }}
       {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'John Doe']) }}
@@ -58,8 +58,9 @@
       {{ Form::checkbox('tos', '1') }}
       <label class="form-check-label" for="tos">By checking this box, I read and agree to the <a href="/tos">Terms of Service.</a></label>
     </div>
+    {!! NoCaptcha::displaySubmit('commission', 'Submit', ['class' => 'btn btn-primary', 'data-badge' => 'inline']) !!}
+    {{-- Form::submit('Submit', ['class' => 'btn btn-primary']) --}}
 
-    {{ Form::submit('Submit', ['class' => 'btn btn-primary']) }}
   {!! Form::close() !!}
 
 @endsection

@@ -39,10 +39,11 @@ class CommissionController extends Controller
           'name' => 'required',
           'email' => 'required|email',
           'duedate' => 'required',
-          'type' => 'required|integer|between:1,4',
+          'type' => 'required|integer|between:0,5',
           'commercial' => 'required|boolean',
           'info' => 'required',
-          'tos' => 'required|accepted'
+          'tos' => 'required|accepted',
+          'g-recaptcha-response' => 'required|captcha'
         ]);
 
         $input = $request->all();

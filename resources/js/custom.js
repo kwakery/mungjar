@@ -19,5 +19,9 @@ $(document).ready(function() {
         });
     });
 
-    
+    /* Bootstrap stuff */
+
+    $('[data-toggle="tooltip"]').tooltip()
+
+
 });

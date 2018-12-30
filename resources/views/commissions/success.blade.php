@@ -8,7 +8,7 @@
 <div class="text-center">
   <p>Now, all you need to do is wait for me to review your commission. <br />
      I <em>highly</em> recommend that you click the button below to connect with Discord so that we can have a quicker way to communicate.<br />
-     <a href="/connect/{{ $token }}"><button class="btn btn-lg" id="discordBtn" type="button"><i class="fab fa-discord"></i></button></a>
+     <a href="/connect/{{ $token }}"><button class="btn btn-lg" id="discordBtn" type="button" data-toggle="tooltip" data-placement="top" title="Connect to Discord!"><i class="fab fa-discord"></i></button></a>
   </p>
 
   <h5>Your Unique Commission URL</h5>

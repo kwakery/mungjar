@@ -19,7 +19,7 @@
 
   <h2>Email:</h2>
   <p>Fill out the following form, and I will get back to you within 48 hours.</p>
-  {!! Form::open(['url' => 'contact/submit']) !!}
+  {!! Form::open(['id' => 'contact-me', 'url' => 'contact/submit']) !!}
     <div class="form-group">
       {{ Form::label('name', 'Name') }}
       {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'John Doe', 'required' => 'required']) }}
@@ -35,6 +35,8 @@
       {{ Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'Enter Message', 'required' => 'required']) }}
     </div>
 
-    {{ Form::submit('Submit', ['class' => 'btn btn-primary text-center']) }}
+    {!! NoCaptcha::displaySubmit('contact-me', 'Submit', ['class' => 'btn btn-primary text-center', 'data-badge' => 'inline']) !!}
+
+    {{-- Form::submit('Submit', ['class' => 'btn btn-primary text-center']) --}}
   {!! Form::close() !!}
 @endsection
