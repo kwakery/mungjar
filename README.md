@@ -1,6 +1,6 @@
-# Commissioner
+# mungjar
 
-Commissioner is a portfolio website that also handles the process of commissions programmed in PHP with the Laravel framework.
+mungjar is a portfolio website that also handles the process of commissions programmed in PHP with the Laravel framework.
 
 ## Installation
 
