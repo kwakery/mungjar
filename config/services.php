@@ -16,7 +16,9 @@ return [
 
     'discord' => [
         'clientid' => env('DISCORD_CLIENT_ID'),
-        'secret' => env('DISCORD_SECRET')
+        'secret' => env('DISCORD_SECRET'),
+        'message_webhook' => env('DISCORD_MESSAGE_WEBHOOK'),
+        'commission_webhook' => env('DISCORD_COMMISSION_WEBHOOK')
     ],
 
     'mailgun' => [

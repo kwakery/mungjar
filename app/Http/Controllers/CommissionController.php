@@ -61,11 +61,15 @@ class CommissionController extends Controller
         /* Store commission */
         $commission->save();
 
-        // $route = route('commissions.show', $token);
-        // sendHook("**zOMG!!~ A new commission has been requested!**\r\nName: {$input['name']}\r\nPayPal Email: {$input['paypal']}\r\nCharacter Name: {$input['ign']}\r\nRequested Deadline: {$input['deadline']}\r\nCommission Type:{$input['type']}\r\nCommercial Use? {$commercial}\r\nAdditional Information: {$input['comments']}\r\n{$route}\r\n@everyone");
+        /* Send webhook */
+        $route = route('commissions.show', $token);
+        $commercial = $input['commercial'] ? 'Yes' : 'No';
+        $commission_text = "**{$input['name']} made a commission!**\nPayPal Email: {$input['email']}\nDate needed by: {$input['duedate']}\nCommission Type:{$input['type']}\nCommercial Use? {$commercial}\nAdditional Information: {$input['info']}\n{$route}\n@everyone";
+        sendCommission($commission_text);
 
         // Redirect
-        return view('commissions.success', ['token' => $token]);
+        //return redirect('/commissions/'.$token.);
+        return view('commissions.success')->with('token', $token);
     }
 
     /**
@@ -76,7 +80,8 @@ class CommissionController extends Controller
      */
     public function show(Commission $commission)
     {
-
+        $token = $commission->token;
+        return view('commissions.show', ['commission' => $commission]);
     }
 
     /**

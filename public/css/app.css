@@ -10507,16 +10507,16 @@ body {
   letter-spacing: 1.5px;
 }
 
-#pricing div h2 {
-  font-weight: bold;
-}
-
-#pricing div ul {
+ul {
   padding-left: 0;
 }
 
-#pricing div ul li {
+ul li {
   list-style-type: none;
+}
+
+#pricing div h2 {
+  font-weight: bold;
 }
 
 nav {
@@ -10603,6 +10603,24 @@ html {
 
 footer {
   margin-bottom: 20px;
+}
+
+/* Discord */
+
+#discordBtn {
+  background-color: #7289da;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#discordBtn .fab {
+  font-size: 35px;
+}
+
+#discordBtn:hover {
+  background-color: #fab988;
+  transition: background-color 0.3s ease;
 }
 
 /* Masonry */

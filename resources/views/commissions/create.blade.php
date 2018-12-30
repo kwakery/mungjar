@@ -27,16 +27,16 @@
 
     <div class="form-group">
       <p>Type</p>
-      {{ Form::radio('type', '1', true) }}
+      {{ Form::radio('type', '0', true) }}
       {{ Form::label('type', 'Chibi') }}
 
-      {{ Form::radio('type', '2', false) }}
+      {{ Form::radio('type', '1', false) }}
       {{ Form::label('type', 'Chibi 2') }}
 
-      {{ Form::radio('type', '3', false) }}
+      {{ Form::radio('type', '2', false) }}
       {{ Form::label('type', 'Panels') }}
 
-      {{ Form::radio('type', '4', false) }}
+      {{ Form::radio('type', '3', false) }}
       {{ Form::label('type', 'Other (Specify in Additional Information)') }}
     </div>
 

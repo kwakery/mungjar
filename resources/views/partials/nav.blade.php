@@ -2,7 +2,7 @@
   <a href="/"><h1>mungjar</h1></a>
   <ul>
     <li class="{{ isActive("portfolio") }}"><a href="/portfolio">portfolio</a></li>
-    <li class="{{ isActive("commission") }}"><a href="/commission">commission</a></li>
+    <li class="{{ isActive("commission") }}"><a href="/commissions/create">commission</a></li>
     <li class="{{ isActive("faq") }}"><a href="/faq">faq</a></li>
     <li class="{{ isActive("contact") }}"><a href="/contact">contact</a></li>
   </ul>

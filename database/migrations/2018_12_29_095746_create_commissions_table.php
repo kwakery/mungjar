@@ -19,11 +19,11 @@ class CreateCommissionsTable extends Migration
             $table->string('email');
             $table->string('duedate');
             $table->tinyInteger('type');
-            $table->boolean('commercial', 1);
+            $table->boolean('commercial')->default(false);
             $table->mediumText('info');
             $table->tinyInteger('status')->default(0);
             $table->string('token');
-            $table->tinyInteger('auth')->default(0);
+            $table->boolean('auth')->default(false);
             $table->string('discord')->nullable();
             $table->timestamps();
         });

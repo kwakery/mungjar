@@ -26,7 +26,10 @@ class ContactController extends Controller
 
       $message->save();
 
-      // TODO: add user to "queue" and have bot make separate commission channel.
+      // Send Message to server
+      $message_string = "{$message->name} has sent you a message:\n```{$message->message}```\nEmail: {$message->email}\n@everyone";
+      sendMessage($message_string);
+
       // Redirect
       return redirect('/')->with('success', 'Message Sent');
     }

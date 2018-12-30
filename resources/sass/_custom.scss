@@ -16,20 +16,16 @@ body {
   letter-spacing: 1.5px;
 }
 
-#pricing {
-  div {
-    h2 {
-      font-weight: bold;
-    }
+ul {
+  padding-left: 0;
 
-    ul {
-      padding-left: 0;
-
-      li {
-        list-style-type: none;
-      }
-    }
+  li {
+    list-style-type: none;
   }
+}
+
+#pricing div h2 {
+  font-weight: bold;
 }
 
 nav {
@@ -53,7 +49,6 @@ nav {
     li {
       display: inline;
       margin-right: 25px;
-
 
       a {
         color: #000;
@@ -120,15 +115,31 @@ footer {
   margin-bottom: 20px;
 }
 
+/* Discord */
 
+#discordBtn {
+  background-color: #7289da;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+
+  .fab {
+    font-size: 35px;
+  }
+
+  &:hover {
+    background-color: #fab988;
+    transition: background-color 0.3s ease;
+  }
+}
 
 /* Masonry */
 .grid-item {
-    width: 25%;
-    padding: 0 15px;
-    box-sizing: border-box;
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box;
 
-    img {
-      width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
