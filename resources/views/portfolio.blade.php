@@ -24,7 +24,7 @@
   @foreach ($directories as $directory)
     @php $files = File::allFiles($directory); shuffle($files); @endphp
     @foreach ($files as $image)
-      <div class="grid-item {{ substr(dirname($image), 17) }}@if(endsWith($directory, "chibi1") || endsWith($directory, "chibi2") || endsWith($directory, "panels")) commission @else other @endif">
+      <div class="grid-item {{ substr(dirname($image), 17) }}@if(endsWith($directory, "chibi1") || endsWith($directory, "chibi2") || endsWith($directory, "panels")) commission @elseif (endsWith($directory, "traditional")) @else other @endif">
         <img class="activator" src="{{ $image }}">
       </div>
     @endforeach

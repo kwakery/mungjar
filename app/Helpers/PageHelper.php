@@ -3,12 +3,12 @@
 /* Discord stuff */
 
 function sendWebhook($provider, $message) {
-  // $data = array("content" => $message, "username" => ucfirst($provider));
-  // $curl = curl_init(config("services.discord.{$provider}_webhook"));
-  // curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
-  // curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
-  // curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-  // return curl_exec($curl);
+  $data = array("content" => $message, "username" => ucfirst($provider));
+  $curl = curl_init(config("services.discord.{$provider}_webhook"));
+  curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+  curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  return curl_exec($curl);
 }
 
 function sendMessage($message) {
