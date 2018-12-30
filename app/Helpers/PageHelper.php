@@ -21,27 +21,27 @@ function sendCommission($message) {
 
 /* Commission stuff */
 function getCType(int $code) {
-  define('TYPE_STRINGS', [
+  $types = [
     "Chibi 1",
     "Chibi 2",
     "Panel",
     "Other",
-  ]);
+  ];
 
-  return TYPE_STRINGS[$code];
+  return $types[$code];
 }
 
 function getStatus(int $code) {
-  define('CODE_STRINGS', [
+  $statuses = [
     "Awaiting Approval",
     "Approved",
     "Currently Drawing",
     "Sketch finished, please pay invoice",
     "Payment Received, now coloring",
     "Completed"
-  ]);
+  ];
 
-  return CODE_STRINGS[$code];
+  return $statuses[$code];
 }
 
 function censor($input) {

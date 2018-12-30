@@ -26,7 +26,7 @@
     </div>
 
     <div class="form-group">
-      <p>Type</p>
+      <p>Type *</p>
       {{ Form::radio('type', '0', true) }}
       {{ Form::label('type', 'Chibi') }}
 
@@ -41,7 +41,7 @@
     </div>
 
     <div class="form-group">
-      <p>Are you going to be using the work for commercial use? <a href="/faq#commercial-use">(Click here to make sure)</a>*</p>
+      <p>Are you going to be using the work for commercial use? <a href="/faq#commercial-use">(Click here to make sure)</a> *</p>
       {{ Form::radio('commercial', '1', true) }}
       {{ Form::label('commercial', 'Yes') }}
 

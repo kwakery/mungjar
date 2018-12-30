@@ -14,7 +14,7 @@ class CommissionController extends Controller
      */
     public function index()
     {
-        //
+      return redirect('/');
     }
 
     /**
@@ -36,7 +36,7 @@ class CommissionController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-          'name' => 'required',
+          'name' => 'required|alpha',
           'email' => 'required|email',
           'duedate' => 'required',
           'type' => 'required|integer|between:0,5',
@@ -93,7 +93,7 @@ class CommissionController extends Controller
      */
     public function edit(Commission $commission)
     {
-        return view('/');
+        return redirect('/');
     }
 
     /**
@@ -105,7 +105,7 @@ class CommissionController extends Controller
      */
     public function update(Request $request, Commission $commission)
     {
-        return view('/');
+      return redirect('/');
     }
 
     /**
@@ -116,6 +116,6 @@ class CommissionController extends Controller
      */
     public function destroy(Commission $commission)
     {
-        return view('/');
+      return redirect('/');
     }
 }
