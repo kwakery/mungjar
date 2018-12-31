@@ -17,7 +17,7 @@ class TaskAPIController extends Controller
      */
     public function index()
     {
-      return TaskResource::collection(Task::all());
+      return TaskResource::collection(Task::where('status', 0)->get());
     }
 
     /**
