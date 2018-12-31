@@ -55,6 +55,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'portfolio' => [
+            'driver' => 'local',
+            'root' => public_path('images/portfolio/'),
+            'url' => env('APP_URL').'/images/portfolio/',
+            'visibility' => 'public'
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

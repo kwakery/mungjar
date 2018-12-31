@@ -67,3 +67,8 @@ function endsWith($haystack, $needle) {
 
     return (substr($haystack, -$length) === $needle);
 }
+
+function getFolderContents($directory) {
+  $ignoreArr = [".", ".."];
+  return array_values(array_diff(scandir($directory), $ignoreArr));
+}

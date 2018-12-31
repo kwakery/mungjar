@@ -15,5 +15,6 @@ use Illuminate\Http\Request;
 
 Route::prefix('v1')->group(function() {
   Route::resource('commissions', 'api\CommissionAPIController');
+  Route::resource('pictures', 'api\PictureAPIController');
   Route::resource('tasks', 'api\TaskAPIController');
 });
