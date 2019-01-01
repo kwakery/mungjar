@@ -17,4 +17,5 @@ Route::prefix('v1')->group(function() {
   Route::resource('commissions', 'api\CommissionAPIController');
   Route::resource('pictures', 'api\PictureAPIController');
   Route::resource('tasks', 'api\TaskAPIController');
+  Route::patch('settings', 'api\SettingsAPIController@update');
 });

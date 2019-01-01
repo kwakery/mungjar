@@ -149,3 +149,23 @@ footer {
 .grecaptcha-badge {
   margin-bottom: 20px;
 }
+
+#sticky-open-logo {
+    background-image: url("../assets/images/open.png");
+    background-size: 100% 100%;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    right:0px;
+    bottom:0px;
+}
+
+#sticky-closed-logo {
+    background-image: url("../assets/images/closed.png");
+    background-size: 100% 100%;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    right:0px;
+    bottom:0px;
+}

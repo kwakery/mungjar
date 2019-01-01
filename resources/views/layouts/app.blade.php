@@ -41,6 +41,14 @@
 
     @endif
 
+    @if (config('app.commissions_open'))
+      @if (!Request::is('commissions/create'))
+        <a href="/commissions/create" id="sticky-open-logo" data-toggle="tooltip" data-placement="top" title="Click here to open a commission!"></a>
+      @endif
+    @else
+      <a href="/commissions/create" id="sticky-closed-logo" data-toggle="tooltip" data-placement="top" title="Commissions are currently closed."></a>
+    @endif
+
     @include('partials.scripts')
   </body>
 </html>

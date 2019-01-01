@@ -72,3 +72,17 @@ function getFolderContents($directory) {
   $ignoreArr = [".", ".."];
   return array_values(array_diff(scandir($directory), $ignoreArr));
 }
+
+// https://stackoverflow.com/a/52742492
+function setEnv($key, $value)
+{
+    $path = app()->environmentFilePath();
+    $oldKey = env($key) ? 'true' : 'false';
+    $escaped = preg_quote('='.$oldKey, '/');
+
+    file_put_contents($path, preg_replace(
+        "/^{$key}{$escaped}/m",
+        "{$key}={$value}",
+        file_get_contents($path)
+    ));
+}

@@ -10641,3 +10641,23 @@ footer {
   margin-bottom: 20px;
 }
 
+#sticky-open-logo {
+  background-image: url(/images/open.png?aceff810096b10dd920fe2d8326c34f2);
+  background-size: 100% 100%;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+
+#sticky-closed-logo {
+  background-image: url(/images/closed.png?22902b118558585e0e4625dac8195fbc);
+  background-size: 100% 100%;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+

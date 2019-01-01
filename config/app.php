@@ -3,6 +3,7 @@
 return [
 
     'token' => env('API_TOKEN'),
+    'commissions_open' => env('COMMISSIONS_OPEN', true),
     /*
     |--------------------------------------------------------------------------
     | Application Name
